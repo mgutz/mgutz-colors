@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -rf /tmp/mgutz-colors
+cp -r docs /tmp/mgutz-colors
+git co gh-pages
+cp -r docs/* .
