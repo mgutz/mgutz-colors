@@ -1,8 +1,3 @@
-# mgutz-colors
-
-ANSI colors string library.
-
-
 ## Install
 
 npm install mgutz-colors
