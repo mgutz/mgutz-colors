@@ -3,7 +3,7 @@
   "name": "mgutz-colors",
   "desciption" : "ANSI colors string library for sexy color output.",
   "version": "0.1.0",
-  "homepage": "https://github.com/mgutz/mgutz-colors",
+  "homepage": "http://mgutz.github.com/mgutz-colors",
   "repository": {
     "type": "git",
     "url": "https://github.com/mgutz/mgutz-colors.git"
