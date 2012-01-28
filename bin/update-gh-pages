@@ -1,6 +1,9 @@
 #!/bin/bash
 
-rm -rf /tmp/mgutz-colors
-cp -r docs /tmp/mgutz-colors
+tmpdir=/tmp/`basename $PWD`
+
+rm -rf $tmpdir
+mkdir -p $tmpdir
+cp -r docs  $tmpdir
 git co gh-pages
-cp -r docs/* .
+cp -r $tmpdir/docs/* .
