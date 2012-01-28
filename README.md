@@ -17,12 +17,14 @@ General usage
 
 Style format is `color+attributes:bgColor+attributes`
 
+```javascript
     "red"            // red
     "red+b"          // red bold
     "red+u"          // red underline
     "red+bh"         // red bold high-intensity
     "red:white"      // red on white
     "red+b:white+h"  // red bold on white high-intensity
+```
 
 More flexible way to require it
 

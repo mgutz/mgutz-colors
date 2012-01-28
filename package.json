@@ -6,7 +6,7 @@
   "homepage": "https://github.com/mgutz/mgutz-colors",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mgutz/mgutz-colors.git"
+    "url": "https://github.com/mgutz/mgutz-colors.git"
   },
   "scripts": {
     "test": "node test/colorsTest.js"
