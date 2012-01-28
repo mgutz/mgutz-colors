@@ -8,9 +8,10 @@ var color = Colors.color;
 
 
 var colors =
-  ['black',  'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'];
+  ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'];
+
 var bgColors =
-  ['', ':black',  ':red', ':green', ':yellow', ':blue', ':magenta', ':cyan', ':white'];
+  ['', ':black', ':red', ':green', ':yellow', ':blue', ':magenta', ':cyan', ':white'];
 
 
 function pad(s, length) {
