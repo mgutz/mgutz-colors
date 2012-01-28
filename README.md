@@ -1,54 +1,42 @@
 ## Install
 
-npm install mgutz-colors
+    npm install mgutz-colors
 
 ## Using
 
 General usage
 
-```javascript
-var color = require("mgutz-colors").color;
+    var color = require("mgutz-colors").color;
 
-console.log(color("red on black", "red:black"));
-```
+    console.log(color("red on black", "red:black"));
 
 Style format is `color+attributes:bgColor+attributes`
 
-```javascript
-"red"            // red
-"red+b"          // red bold
-"red+u"          // red underline
-"red+bh"         // red bold high-intensity
-"red:white"      // red on white
-"red+b:white+h"  // red bold on white high-intensity
-```
+    "red"            // red
+    "red+b"          // red bold
+    "red+u"          // red underline
+    "red+bh"         // red bold high-intensity
+    "red:white"      // red on white
+    "red+b:white+h"  // red bold on white high-intensity
 
 More flexible way to require it
 
-```javascript
-var colors = require("mgutz-colors"),
-    color = colors.color;
-```
+    var colors = require("mgutz-colors"),
+        color = colors.color;
 
 Be lazy
 
-```javascript
-var bc = colors.fn("black:cyan");
-console.log(bc("this is black text on cyan"));
-```
+    var bc = colors.fn("black:cyan");
+    console.log(bc("this is black text on cyan"));
 
 Turn off colors easily
 
-```javascript
-colors.plain = true;
-console.log(bc("this is plain now"));
-```
+    colors.plain = true;
+    console.log(bc("this is plain now"));
 
 See all color combinations in your terminal
 
-```javascript
-npm test
-```
+    npm test
 
 ## License
 
