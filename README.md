@@ -7,7 +7,6 @@
 General usage
 
     var color = require("mgutz-colors").color;
-
     console.log(color("red on black", "red:black"));
 
 Style format is `color+attributes:bgColor+attributes`
@@ -19,12 +18,16 @@ Style format is `color+attributes:bgColor+attributes`
     "red:white"      // red on white
     "red+b:white+h"  // red bold on white high-intensity
 
-More flexible way to require it
+    colors: black, white, red, yellow, green, cyan, blue, magenta
+
+    attributes: b=bold, h=high intensity, u=underline
+
+Flexible way to require
 
     var colors = require("mgutz-colors"),
         color = colors.color;
 
-Be lazy
+Be lazy and define color functions
 
     var bc = colors.fn("black:cyan");
     console.log(bc("this is black text on cyan"));
@@ -34,7 +37,7 @@ Turn off colors easily
     colors.plain = true;
     console.log(bc("this is plain now"));
 
-See all color combinations in your terminal
+Output all color combinations in terminal
 
     npm test
 

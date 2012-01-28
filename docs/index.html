@@ -7,7 +7,6 @@
 <p>General usage</p>
 
 <pre><code>var color = require("mgutz-colors").color;
-
 console.log(color("red on black", "red:black"));</code></pre>
 
 <p>Style format is <code>color+attributes:bgColor+attributes</code></p>
@@ -17,14 +16,18 @@ console.log(color("red on black", "red:black"));</code></pre>
 "red+u"          // red underline
 "red+bh"         // red bold high-intensity
 "red:white"      // red on white
-"red+b:white+h"  // red bold on white high-intensity</code></pre>
+"red+b:white+h"  // red bold on white high-intensity
 
-<p>More flexible way to require it</p>
+colors: black, white, red, yellow, green, cyan, blue, magenta
+
+attributes: b=bold, h=high intensity, u=underline</code></pre>
+
+<p>Flexible way to require</p>
 
 <pre><code>var colors = require("mgutz-colors"),
     color = colors.color;</code></pre>
 
-<p>Be lazy</p>
+<p>Be lazy and define color functions</p>
 
 <pre><code>var bc = colors.fn("black:cyan");
 console.log(bc("this is black text on cyan"));</code></pre>
@@ -34,7 +37,7 @@ console.log(bc("this is black text on cyan"));</code></pre>
 <pre><code>colors.plain = true;
 console.log(bc("this is plain now"));</code></pre>
 
-<p>See all color combinations in your terminal</p>
+<p>Output all color combinations in terminal</p>
 
 <pre><code>npm test</code></pre>
 
@@ -42,7 +45,7 @@ console.log(bc("this is plain now"));</code></pre>
 
 <p>(The MIT License)</p>
 
-<p>Copyright (c) 2012 Mario Gutierrez <a href="&#x6D;&#97;&#x69;lt&#111;:&#x6D;&#97;&#114;&#x69;&#x6F;&#64;&#x6D;g&#117;&#x74;&#122;&#46;&#x63;&#111;&#109;">&#x6D;&#97;&#114;&#x69;&#x6F;&#64;&#x6D;g&#117;&#x74;&#122;&#46;&#x63;&#111;&#109;</a></p>
+<p>Copyright (c) 2012 Mario Gutierrez <a href="&#x6D;a&#105;&#108;t&#x6F;:&#x6D;a&#x72;&#105;&#111;&#x40;&#x6D;&#x67;&#x75;&#116;&#x7A;&#x2E;&#99;&#111;&#109;">&#x6D;a&#x72;&#105;&#111;&#x40;&#x6D;&#x67;&#x75;&#116;&#x7A;&#x2E;&#99;&#111;&#109;</a></p>
 
 <p>Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
