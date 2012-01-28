@@ -1,88 +1,70 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
+<!DOCTYPE html> <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">      <title>mgutz-colors</title>   <style>     body {       font-size: 16px;       line-height: 24px;       background: #fff url("bg.png");       color: #252519;       font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;       padding: 0 0 50px 50px;     }     div.container {       width: 720px;       margin: 50px 0 50px 50px;     }     p {       width: 550px;     }       #documentation p {         margin-bottom: 4px;       }     a, a:visited {       padding: 0 2px;       text-decoration: none;       background: #dbe6f3;       color: #3f6fa5;     }     a:active, a:hover {       color: #dbe6f3;       background: #3f6fa5;     }     h1, h2, h3, h4, h5, h6 {       margin-top: 40px;       width: 550px;       line-height: 1.25em;     }     b.header {       font-size: 18px;     }     span.alias {       font-size: 14px;       font-style: italic;       margin-left: 20px;     }     table, tr, td {       margin: 0; padding: 0;     }       td {         padding: 2px 12px 2px 0;       }     ul {       list-style-type: circle;       padding: 0 0 0 20px;     }       li {         width: 500px;         margin-bottom: 10px;       }     code, pre, tt {       font-family: Monaco, Consolas, "Lucida Console", monospace;       font-size: 12px;       line-height: 18px;       color: #555529;     }       pre {         font-size: 12px;         padding: 2px 0 2px 12px;         border-left: 6px solid #aaaa99;         margin: 0px 0 30px;       }            #ribbon {      line-height: 0;     }          #ribbon:hover {      background: none;     }          #ribbon img {      position: fixed;      top: 0;      right: 0;      border: 0;      z-index: 2;     }   </style> </head> <body>      <a id="ribbon" href="https://github.com/mgutz/mgutz-colors">    <img src="https://a248.e.akamai.net/assets.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67"      alt="Fork me on GitHub"></a>      <h1>Paige.js</h1>        <em>ANSI colors string library.</em>         <h3>Source files:</h3>   <ol>            <li><a href="colors.html">colors.js</a></li>        </ol>      <h1>mgutz-colors</h1>
 
-  <title>mgutz/mgutz-colors @ GitHub</title>
+<p>ANSI colors string library.</p>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #f4cca3;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #0b335c; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #0b335c; }
-    h3 { text-align: center; color: #0b335c; }
-    a { color: #0b335c; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
+<h2>Install</h2>
 
-<body>
-  <a href="https://github.com/mgutz/mgutz-colors"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<p>npm install mgutz-colors</p>
 
-  <div id="container">
+<h2>Using</h2>
 
-    <div class="download">
-      <a href="https://github.com/mgutz/mgutz-colors/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/mgutz/mgutz-colors/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
+<p>General usage</p>
 
-    <h1><a href="https://github.com/mgutz/mgutz-colors">mgutz-colors</a>
-      <span class="small">by <a href="https://github.com/mgutz">mgutz</a></span></h1>
+<pre><code>var color = require("mgutz-colors").color;
 
-    <div class="description">
-      ANSI colors string library
-    </div>
+console.log(color("red on black", "red:black"));</code></pre>
 
-    
+<p>Style format is <code>color+attributes:bgColor+attributes</code></p>
 
-    
+<pre>
+    "red"            // red
+    "red+b"          // red bold
+    "red+u"          // red underline
+    "red+bh"         // red bold high-intensity
+    "red:white"      // red on white
+    "red+b:white+h"  // red bold on white high-intensity
+</pre>
 
-    
+<p>More flexible way to require it</p>
 
-    
+<pre><code>var colors = require("mgutz-colors"),
+    color = colors.color;</code></pre>
 
-    
-      <h2>Authors</h2>
-      <p>mgutz (mario@mgutz.com)<br/>      </p>
-    
+<p>Be lazy</p>
 
-    
-      <h2>Contact</h2>
-      <p>Mario Gutierrez (mario@mgutz.com)<br/>      </p>
-    
+<pre><code>var bc = colors.fn("black:cyan");
+console.log(bc("this is black text on cyan"));</code></pre>
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/mgutz/mgutz-colors/zipball/master">zip</a> or
-      <a href="https://github.com/mgutz/mgutz-colors/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/mgutz/mgutz-colors</pre>
-    </p>
+<p>Turn off colors easily</p>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/mgutz/mgutz-colors">mgutz/mgutz-colors</a>
-    </div>
+<pre><code>colors.plain = true;
+console.log(bc("this is plain now"));</code></pre>
 
-  </div>
+<p>See all color combinations in your terminal</p>
 
-</body>
-</html>
+<pre><code>npm test</code></pre>
+
+<h2>License</h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2012 Mario Gutierrez <a href="&#x6D;&#97;&#x69;&#x6C;t&#111;:&#109;&#97;&#114;i&#111;&#64;&#x6D;&#x67;&#x75;&#x74;&#x7A;&#x2E;c&#111;&#109;">&#109;&#97;&#114;i&#111;&#64;&#x6D;&#x67;&#x75;&#x74;&#x7A;&#x2E;c&#111;&#109;</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p> </body> </html>
