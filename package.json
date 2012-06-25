@@ -2,7 +2,7 @@
   "author": "Mario Gutierrez <mario@mgutz.com> (http://mgutz.com)",
   "name": "mgutz-colors",
   "desciption" : "ANSI colors string library for sexy color output.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://mgutz.github.com/mgutz-colors",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
     "test": "node test/colorsTest.js"
   },
   "engines": {
-    "node": "~0.6"
+    "node": ">= 0.6"
   },
   "dependencies": {},
   "devDependencies": {},
