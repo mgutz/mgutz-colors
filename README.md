@@ -9,7 +9,7 @@ General usage
     var color = require("mgutz-colors").color;
     console.log(color("red on black", "red:black"));
 
-Style format is `color+attributes:bgColor+attributes`
+Style format is `color+attributes:backgroundColor+attributes`
 
     "red"            // red
     "red+b"          // red bold
@@ -36,6 +36,13 @@ Turn off colors easily
 
     colors.plain = true;
     console.log(bc("this is plain now"));
+
+Get color code of high intensity red on black background
+
+    // use ansi escape sequences directly for speed (like logging)
+    var redOnBlack = colors.ansi('red+h:black')
+    console.log(redOnBlack + message + colors.reset);
+
 
 Output all color combinations in terminal
 
